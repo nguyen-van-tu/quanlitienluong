@@ -1,17 +1,17 @@
-public class NhanVienFullTime extends NhanVien {
+public class EmployeeFullTime extends Employee {
     private int hardSalary;
     private int bonus;
     private int punish;
 
 
-    public NhanVienFullTime(int ID, String name, String phone, String email, int hardSalary, int bonus, int punish) {
+    public EmployeeFullTime(int ID, String name, String phone, String email, int hardSalary, int bonus, int punish) {
         super(ID, name, phone, email);
         this.hardSalary = hardSalary;
         this.bonus = bonus;
         this.punish = punish;
     }
 
-    public NhanVienFullTime() {
+    public EmployeeFullTime() {
 
     }
 

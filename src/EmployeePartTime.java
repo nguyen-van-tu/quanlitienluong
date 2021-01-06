@@ -1,16 +1,16 @@
 
 
-public class NhanVienPartTime extends  NhanVien{
+public class EmployeePartTime extends Employee {
     private int numTime;
 
 
 
-    public NhanVienPartTime(int ID, String name, String phone, String email, int numTime) {
+    public EmployeePartTime(int ID, String name, String phone, String email, int numTime) {
         super(ID, name, phone, email);
         this.numTime = numTime;
     }
 
-    public NhanVienPartTime() {
+    public EmployeePartTime() {
 
     }
 

@@ -1,10 +1,11 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        ListPartTime listPartTime = new ListPartTime();
-        ListFullTime listFullTime = new ListFullTime();
+        EmployeeManagement employeeManagement = new EmployeeManagement();
         Scanner sc = new Scanner(System.in);
         int index;
         do {
@@ -14,22 +15,22 @@ public class Main {
             System.out.println("4: Tổng lương parttime");
             System.out.println("0: Exit");
             index = Integer.parseInt(sc.nextLine());
-            switch (index){
+            switch (index) {
                 case 1:
                     int i;
                     do {
                         System.out.println("1: Parttime");
                         System.out.println("2: Fulltime");
                         System.out.println("0: Quay lại");
-                        i=Integer.parseInt(sc.nextLine());
-                        switch (i){
+                        i = Integer.parseInt(sc.nextLine());
+                        switch (i) {
                             case 1:
-                                listPartTime.addPartTime();
+                                employeeManagement.addEmployeePartTime();
                                 break;
                             case 2:
-                                listFullTime.addFullTime();
+                                employeeManagement.addEmployeeFullTime();
                         }
-                    }while (i != 0);
+                    } while (i != 0);
                     break;
                 case 2:
                     int a;
@@ -37,21 +38,25 @@ public class Main {
                         System.out.println("1: Parttime");
                         System.out.println("2: Fulltime");
                         System.out.println("0: Quay lại");
-                        a=Integer.parseInt(sc.nextLine());
-                        switch (a){
+                        a = Integer.parseInt(sc.nextLine());
+                        switch (a) {
                             case 1:
-                                listPartTime.showPartTime();
+                                employeeManagement.showPartTime();
                                 break;
                             case 2:
-                                listFullTime.showFullTime();
+                                employeeManagement.showFullTime();
                         }
-                    }while (a != 0);
+                    } while (a != 0);
                     break;
                 case 3:
-                    listFullTime.displayNhanvienLuongThap(listFullTime.getAvgSalary());
+                    employeeManagement.displayNhanvienLuongThap(employeeManagement.getAvgSalary());
+                    break;
                 case 4:
-                    listPartTime.totalSalary();
+                    employeeManagement.totalSalaryPartTime();
+                    break;
+                case 5:
+
             }
-        }while (index != 0);
+        } while (index != 0);
     }
 }

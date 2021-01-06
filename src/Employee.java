@@ -1,13 +1,13 @@
-public class NhanVien {
+public class Employee {
     private int ID;
     private String name;
     private String phone;
     private String email;
 
-    public NhanVien() {
+    public Employee() {
     }
 
-    public NhanVien(int ID, String name, String phone, String email) {
+    public Employee(int ID, String name, String phone, String email) {
         this.ID = ID;
         this.name = name;
         this.phone = phone;
@@ -34,8 +34,9 @@ public class NhanVien {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public String setPhone(String phone) {
         this.phone = phone;
+        return phone;
     }
 
     public String getEmail() {
